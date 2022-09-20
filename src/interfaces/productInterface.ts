@@ -9,11 +9,3 @@ export interface Order {
   id?: number;
   userId: number;
 }
-
-export interface User {
-  id?: number;
-  username: string;
-  classe: string;
-  level: number;
-  password?: string;
-}
