@@ -24,11 +24,6 @@ class ProductModel {
     const [{ insertId }] = await this.connection.execute<ResultSetHeader>(query, values);
     return { id: insertId, ...product };
   };
-
-  public update = async (id: number, orderId: number): Promise<void> => {
-    const query = 'UPDATE Trybesmith.Products SET orderId = ? WHERE id = ?';
-    await this.connection.execute(query, [orderId, id]);
-  };
 }
 
 export default ProductModel;
