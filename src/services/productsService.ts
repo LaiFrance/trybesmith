@@ -15,9 +15,9 @@ class ProductService {
     return products;
   };
 
-  public create = async (prod: Product): Promise<Product> => {
-    validateProd(prod);
-    const product = await this.model.create(prod);
+  public create = async (produto: Product): Promise<Product> => {
+    validateProd(produto);
+    const product = await this.model.create(produto);
     return product;
   };
 }
